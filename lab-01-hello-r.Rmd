@@ -1,11 +1,14 @@
 ---
 title: "Lab 01 - Hello R"
-author: "Musab Isah"
-date: "1/26/2021"
-output: html_document
+author: "manaralsl"
+date: "1/27/2021"
+output: 
+  html_document: 
+    fig_width: 12
+    fig_height: 10
 ---
 
-University ID: 
+University ID:2201002883 
 
 ### Load packages
 
