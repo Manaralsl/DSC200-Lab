@@ -20,4 +20,35 @@ library(datasauRus)
 
 ### Lab Exercise
 
-(Type your answer to the Exercise here. Remember to include the code, you need to put the code between three backticks followed by the following line on top of the code {r load-packages, message=FALSE}. See 'Load Packages' above as an example. Delete everything in these brackets after typing your answer.)
+```{r load-packages, message=FALSE}
+head(datasaurus_dozen)
+summary(datasaurus_dozen)
+View(datasaurus_dozen) 
+ datasaurus_dozen %>%
+ count(dataset) %>%
+ print(13)
+dino_data <- datasaurus_dozen %>%
+ filter(dataset == "dino")
+```
+task1
+```{r}
+ggplot(data = dino_data, mapping = aes(x = x, y = y)) +
+geom_point()
+```
+task2
+```{r}
+ggplot(data = star_data, mapping = aes(x = x, y = y)) +
+geom_point()
+```
+task3
+```{r}
+ggplot(data = circle_data, mapping = aes(x = x, y = y)) +
+geom_point()
+```
+task4
+```{r}
+ggplot(datasaurus_dozen, aes(x = x, y = y, color = dataset))+
+ geom_point()+
+ facet_wrap(~ dataset, ncol = 3) +
+ theme(legend.position = "none")
+```
